@@ -1,0 +1,39 @@
+{
+  "name": "virtual-meet",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "author": "Kristopher Werlinder",
+  "scripts": {
+    "client-install": "cd ../frontend && yarn install",
+    "start": "NODE_ENV=production node server",
+    "server": "nodemon index.ts",
+    "client": "cd ../frontend && yarn start",
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@firebase/auth": "^0.19.3",
+    "@types/socket.io": "^3.0.2",
+    "concurrently": "^6.4.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "firebase": "^9.5.0",
+    "firebase-admin": "^10.0.0",
+    "http": "^0.0.1-security",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "socket.io": "^4.4.1",
+    "uuid": "^8.3.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingSpace": "none",
+    "trailingComma": "all",
+    "printWidth": 99,
+    "arrowParens": "always"
+  },
+  "devDependencies": {
+    "@types/uuid": "^8.3.3"
+  }
+}
